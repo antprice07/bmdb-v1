@@ -1,0 +1,44 @@
+<app-menu></app-menu>
+<span class="component-title">{{title}}</span>
+<p *ngIf="!actor">Loading...</p>
+<div *ngIf='actor'>
+    <main class="single">
+        <table class="table table-sm">
+            <tr>
+                <td>
+                    ID:
+                </td>
+                <td>
+                    {{actor.id}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td>
+                    <input [(ngModel)]="actor.firstName" class="rounded" type="text" disabled>
+                    <input [(ngModel)]="actor.lastName" class="rounded" type="text" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender:
+                </td>
+                <td>
+                    <input [(ngModel)]="actor.gender" class="rounded" type="text" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Birth Date:
+                </td>
+                <td>
+                    <input [(ngModel)]="actor.birthDate" class="rounded" type="date" disabled>
+                </td>
+            </tr>
+        </table>
+        <button (click)="edit()" class="btn btn-warning">Edit</button>
+        <button (click)="delete()" class="btn btn-danger">Delete</button>
+    </main>
+</div>

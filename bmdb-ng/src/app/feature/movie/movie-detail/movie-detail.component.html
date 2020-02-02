@@ -1,0 +1,51 @@
+<app-menu></app-menu>
+<span class="component-title">{{title}}</span>
+<p *ngIf="!movie">Loading...</p>
+<div *ngIf='movie'>
+    <main class="single">
+        <table class="table table-sm">
+            <tr>
+                <td>
+                    ID:
+                </td>
+                <td>
+                    {{movie.id}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Title:
+                </td>
+                <td>
+                    <input [(ngModel)]="movie.title" class="rounded" type="text" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Year:
+                </td>
+                <td>
+                    <input [(ngModel)]="movie.year" class="rounded" type="number" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Rating:
+                </td>
+                <td>
+                    <input [(ngModel)]="movie.rating" class="rounded" type="text" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Director:
+                </td>
+                <td>
+                    <input [(ngModel)]="movie.director" class="rounded" type="text" disabled>
+                </td>
+            </tr>
+        </table>
+        <button (click)="edit()" class="btn btn-warning">Edit</button>
+        <button (click)="delete()" class="btn btn-danger">Delete</button>
+    </main>
+</div>

@@ -1,0 +1,32 @@
+<app-menu></app-menu>
+<span class="component-title">{{title}} </span>
+<span><a routerLink="/credits/create">
+        <img width="20" height="20" src="assets/add-icon.png" title="Add New">
+    </a>
+</span>
+
+<table class="table table-striped table-bordered table-sm" *ngIf="credits">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Actor</th>
+            <th>Movie</th>
+            <th>Role</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of credits">
+            <td>{{c.id}}</td>
+            <td><a routerLink="/actors/detail/{{c.actor.id}}">{{c.actor.firstName}} {{c.actor.lastName}}</a></td>
+            <td><a routerLink="/movies/detail/{{c.movie.id}}">{{c.movie.title}}</a></td>
+            <td>{{c.role}}</td>
+            <td><a routerLink="/credits/detail/{{c.id}}"><img src='assets/details.png' width='30' height='30'
+                        title='Detail'>
+                </a>
+                | <a routerLink="/credits/edit/{{c.id}}"><img src='assets/pencil-icon.png' width='30' height='30'
+                        title='Edit'>
+                </a></td>
+        </tr>
+    </tbody>
+</table>
