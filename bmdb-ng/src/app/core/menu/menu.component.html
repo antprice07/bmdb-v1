@@ -1,5 +1,8 @@
 <nav>
     <ul>
+        <li title="home">
+            <a routerLink="/home"><img src='assets/logo-icon.png' width='30' height='30'></a>
+        </li>
         <li *ngFor="let mi of menuItems" title="{{mi.tooltip}}">
             <a routerLink="{{mi.href}}">{{mi.display}}</a>
         </li>

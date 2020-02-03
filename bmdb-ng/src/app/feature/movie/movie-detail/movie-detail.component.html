@@ -45,7 +45,9 @@
                 </td>
             </tr>
         </table>
-        <button (click)="edit()" class="btn btn-warning">Edit</button>
-        <button (click)="delete()" class="btn btn-danger">Delete</button>
+        <button (click)="edit()" class="btn btn-sm btn-warning">Edit</button> |
+        <button (click)="delete()" class="btn btn-sm btn-danger">Delete</button> |
+        <button routerLink="/credits/full-detail/{{movie.id}}" class="btn btn-sm btn-info">Credit Details</button>
+
     </main>
 </div>

@@ -18,7 +18,8 @@ export class MenuComponent implements OnInit {
     this.menuItems = [
       new MenuItem("Movie","/movies/list","Movie List"),
       new MenuItem("Actor","/actors/list","Actor List"),
-      new MenuItem("Credit","/credits/list","Credit List")
+      new MenuItem("Credit","/credits/list","Credit List"),
+      new MenuItem("Report","/credits/full-detail/1","Credit List")
     ]
   }
 

@@ -105,5 +105,50 @@ public class CreditController {
 		}
 		return jr;
 	}
+	
+	@GetMapping("/movie/{id}")
+	public JsonResponse getCreditByMovieId(@PathVariable int id) {
+		JsonResponse jr = null;
+		try {
+			Iterable<Credit> credits = creditRepo.getCreditByMovieId(id);
+			jr = JsonResponse.getInstance(credits);
+		}catch(Exception e) {
+			jr= JsonResponse.getInstance(e);
+		}
+		
+		
+		
+		
+		return jr;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

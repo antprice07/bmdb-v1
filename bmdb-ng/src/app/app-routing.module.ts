@@ -12,11 +12,13 @@ import { CreditEditComponent } from './feature/credit/credit-edit/credit-edit.co
 import { CreditDetailComponent } from './feature/credit/credit-detail/credit-detail.component';
 import { CreditListComponent } from './feature/credit/credit-list/credit-list.component';
 import { CreditCreateComponent } from './feature/credit/credit-create/credit-create.component';
+import { ReportCreditComponent } from './reports/report-credit/report-credit.component';
+import { HomeComponent } from './core/home/home.component';
 
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
-  { path: 'home', component: MovieListComponent },
+  { path: 'home', component: HomeComponent },
   { path: "movies/list", component: MovieListComponent },
   { path: "movies/detail/:id", component: MovieDetailComponent },
   { path: "movies/edit/:id", component: MovieEditComponent },
@@ -29,6 +31,7 @@ const routes: Routes = [
   { path: "credits/detail/:id", component: CreditDetailComponent },
   { path: "credits/list", component: CreditListComponent },
   { path: "credits/create", component: CreditCreateComponent },
+  { path: "credits/full-detail/:id", component: ReportCreditComponent },
   { path: "**", component: MovieListComponent }
 
 ];

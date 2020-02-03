@@ -7,4 +7,7 @@ import com.bmdb.business.Movie;
 
 public interface CreditRepository extends JpaRepository<Credit, Integer> {
 
+	Iterable<Credit> getCreditByMovieId(Integer movieId);
 }
+
+

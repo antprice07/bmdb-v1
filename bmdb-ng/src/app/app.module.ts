@@ -19,6 +19,8 @@ import { CreditListComponent } from './feature/credit/credit-list/credit-list.co
 import { CreditDetailComponent } from './feature/credit/credit-detail/credit-detail.component';
 import { CreditEditComponent } from './feature/credit/credit-edit/credit-edit.component';
 import { CreditCreateComponent } from './feature/credit/credit-create/credit-create.component';
+import { ReportCreditComponent } from './reports/report-credit/report-credit.component';
+import { HomeComponent } from './core/home/home.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { CreditCreateComponent } from './feature/credit/credit-create/credit-cre
     CreditListComponent,
     CreditDetailComponent,
     CreditEditComponent,
-    CreditCreateComponent
+    CreditCreateComponent,
+    ReportCreditComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

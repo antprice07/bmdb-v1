@@ -1,0 +1,26 @@
+<app-menu></app-menu>
+<h2 class="component-title">{{title}}</h2>
+<table class="table table-sm">
+    <tr>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Director</th>
+    </tr>
+    <tr>
+        <td>
+            <select [(ngModel)]="movie" class="rounded" [compareWith]="compMovie" routerLink="/credits/full-detail/{{movie.id}}" (change)='getCreditedActors(movie.id)'>
+                <option *ngFor="let m of movies" [ngValue]="m">{{m.title}}</option>
+            </select>
+        </td>
+        <td>{{movie.year}}</td>
+        <td>{{movie.director}}</td>
+    </tr>
+    <tr>
+        <td style="font-weight: bold;">Actors:</td>
+        <td style="font-weight: bold;">Role:</td>
+    </tr>
+    <tr *ngFor="let actor of creditedActors">
+        <td>{{actor.actor.firstName}} {{actor.actor.lastName}}</td>
+        <td>{{actor.role}}</td>
+    </tr>
+</table>

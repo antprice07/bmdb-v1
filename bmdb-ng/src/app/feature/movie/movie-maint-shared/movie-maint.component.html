@@ -40,4 +40,5 @@
     </main>
     <span><button (click)="save()" class="btn btn-sm btn-primary">{{submitBtnTitle}}</button></span> |
     <span><button (click)="backClicked()" class="btn btn-sm btn-primary">Back</button></span>
+    <span *ngIf="movie.title !==''"> | <button routerLink="/credits/full-detail/{{movie.id}}" class="btn btn-sm btn-info">Credit Details</button></span>
 </div>
