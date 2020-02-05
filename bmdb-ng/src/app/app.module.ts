@@ -21,6 +21,8 @@ import { CreditEditComponent } from './feature/credit/credit-edit/credit-edit.co
 import { CreditCreateComponent } from './feature/credit/credit-create/credit-create.component';
 import { ReportCreditComponent } from './reports/report-credit/report-credit.component';
 import { HomeComponent } from './core/home/home.component';
+import { SortPipe } from './pipe/sort.pipe';
+import { BaseComponent } from './base/base.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { HomeComponent } from './core/home/home.component';
     CreditEditComponent,
     CreditCreateComponent,
     ReportCreditComponent,
-    HomeComponent
+    HomeComponent,
+    SortPipe,
+    BaseComponent
   ],
   imports: [
     BrowserModule,

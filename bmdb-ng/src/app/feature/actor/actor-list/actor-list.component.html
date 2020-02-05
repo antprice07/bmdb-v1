@@ -8,15 +8,15 @@
 <table class="table table-striped table-bordered table-sm" *ngIf="actors">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Birth Date</th>
+            <th><a (click)="sort('id')">ID</a></th>
+            <th><a (click)="sort('firstName')">Name</a></th>
+            <th><a (click)="sort('gender')">Gender</a></th>
+            <th><a (click)="sort('birthDate')">Birth Date</a></th>
             <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let a of actors">
+        <tr *ngFor="let a of actors | sort:sortColumn:ascOrder">
             <td>{{a.id}}</td>
             <td>{{a.firstName}} {{a.lastName}}</td>
             <td>{{a.gender}}</td>

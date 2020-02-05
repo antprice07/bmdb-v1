@@ -8,14 +8,14 @@
 <table class="table table-striped table-bordered table-sm" *ngIf="movies">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Year</th>
+            <th><a (click)="sort('id')">ID</a></th>
+            <th><a (click)="sort('title')">Title</a></th>
+            <th><a (click)="sort('year')">Year</a></th>
             <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let m of movies">
+        <tr *ngFor="let m of movies | sort:sortColumn:ascOrder">
             <td>{{m.id}}</td>
             <td>{{m.title}}</td>
             <td>{{m.year}}</td>
